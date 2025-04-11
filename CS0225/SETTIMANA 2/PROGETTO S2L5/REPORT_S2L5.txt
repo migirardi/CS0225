@@ -39,14 +39,14 @@ Sono presenti alcuni errori che ho indicato e definito.
     
     
      ERRORE.1 :  
-               La libreria "datetoday" non esiste, il programmatore cercava la libreria "date" e ha dimenticato di inserire il punto subito dopo.
+               La libreria "datetoday" non esiste, il programmatore cercava la libreria " date " e ha dimenticato di inserire il punto subito dopo.
      
      ERRORE.2 : 
                Manca " : " dopo il "TRUE"
         
      ERRORE.3 :
                Qui l'utente non saprà cosa scrivere in quanto non può conoscere i comandi del programma, 
-               quindi prima del ciclo WHILE definirei una nuova funzione per creare un "menù" che mostra all'utente le opzioni che ha a disposizione.
+               quindi prima del ciclo WHILE bisogna definier una nuova funzione per creare una sorta di menù che mostra all'utente le opzioni che ha a disposizione.
         
         
         
@@ -55,7 +55,7 @@ Per risolvere il primo errore basta semplicemente completare la libreria scriven
 
 Per risolvere il secondo errore basta semplicemente aggiungere i 2 punti subito dopo "TRUE".
 
-Per risolvere il terzo errore ho pensato di aggiungere una nuova funzione esterna che mostri all'utente le azioni disponibili volte dall'assistente, a mo' di menù, per poi aggiungere altre frasi stampate affinché l'utente possa capire come potrà agire dall'apertura del programma in poi.
+Per risolvere il terzo errore ho pensato di aggiungere una nuova funzione esterna che mostri all'utente le azioni disponibili svolte dall'assistente, a mo' di menù, per poi aggiungere altre frasi stampate affinché l'utente possa capire come potrà agire dall'apertura del programma in poi.
 
 
 
@@ -66,7 +66,7 @@ Per risolvere il terzo errore ho pensato di aggiungere una nuova funzione estern
 			import datetime
 
 			def assistente_virtuale(comando):    
-			    comando = comando.lower()        <<---------------------------------########## MODIFICA.1
+			    comando = comando.lower()       <<---------------------------------########## MODIFICA.1
 			    if comando == "qual è la data di oggi?":
 				oggi = datetime.date.today()
 				risposta = "La data di oggi è " + oggi.strftime("%d/%m/%Y")
@@ -88,7 +88,7 @@ Per risolvere il terzo errore ho pensato di aggiungere una nuova funzione estern
 			print("Ciao sono il tuo Assistente Virtuale,\n potrò esserti utile in svariati modi!\n")  <<---------------------------------########## MODIFICA.3
 			opzioni()
 			while True:
-			    comando_utente=input("Quale azione vuoi farmi svolgere oggi?\n\nScrivi 'esci' se vuoi chiudere.\n\n")
+			    comando_utente=input("\nQuale azione vuoi farmi svolgere oggi?\n\nScrivi 'esci' se vuoi chiudere.\n\n")
 			    if comando_utente.lower() == "esci":
 				print("Arrivederci!")
 				break
